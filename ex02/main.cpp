@@ -20,7 +20,7 @@ int main() {
         }
         std::cout << std::endl;
 
-        std::cout << intArray[10] << std::endl; // This will throw an exception
+        std::cout << intArray[10] << std::endl;  // This will throw an exception
     } catch (const std::exception& e) {
         std::cerr << toolbox::color::red << "Exception: " << e.what()
                 << toolbox::color::reset << std::endl;
@@ -38,7 +38,7 @@ int main() {
         }
         std::cout << std::endl;
 
-        std::cout << strArray[5] << std::endl; // This will throw an exception
+        std::cout << strArray[5] << std::endl;  // This will throw an exception
     } catch (const std::exception& e) {
         std::cerr << toolbox::color::red << "Exception: " << e.what()
                 << toolbox::color::reset << std::endl;
