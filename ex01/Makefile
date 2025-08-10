@@ -1,4 +1,4 @@
-NAME = template
+NAME = iter
 
 # sources
 SRCS = main.cpp \
