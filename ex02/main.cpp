@@ -1,4 +1,5 @@
 #include <iostream>
+#include <sstream>
 #include <string>
 
 #include <ex02/Array.hpp>
@@ -22,6 +23,9 @@ int main() {
 
         std::cout << intArray[10] << std::endl;  // This will throw an exception
     } catch (const std::exception& e) {
+        std::stringstream ss;
+        ss << "Exception caught: " << e.what();
+        toolbox::logger::StepMark::error(ss.str());
         std::cerr << toolbox::color::red << "Exception: " << e.what()
                 << toolbox::color::reset << std::endl;
     }
@@ -40,6 +44,9 @@ int main() {
 
         std::cout << strArray[5] << std::endl;  // This will throw an exception
     } catch (const std::exception& e) {
+        std::stringstream ss;
+        ss << "Exception caught: " << e.what();
+        toolbox::logger::StepMark::error(ss.str());
         std::cerr << toolbox::color::red << "Exception: " << e.what()
                 << toolbox::color::reset << std::endl;
     }
