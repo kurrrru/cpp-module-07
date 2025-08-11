@@ -35,6 +35,12 @@ int main() {
         strArray[0] = "Hello";
         strArray[1] = "World";
         strArray[2] = "C++";
+		Array<std::string> strArrayCopy(strArray);
+		Array<std::string> strArrayAssign;
+		strArrayAssign = strArrayCopy;
+		strArrayCopy[0] = "Goodbye";
+		strArrayAssign[1] = "Everyone";
+		std::cout << strArrayCopy[0] << " " << strArrayAssign[1] << std::endl;
 
         std::cout << "String Array:" << std::endl;
         for (unsigned int i = 0; i < strArray.size(); ++i) {
